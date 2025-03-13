@@ -9,21 +9,31 @@
     <title>Red Atagi</title>
     <meta name="author" content="Red Atagi">
     <meta name="description" content="A list of Red Atagi's projects">
-    
+
     <style>
+      body {
+        margin: 0;
+      }
+
       .projects-container {
         display: flex;
         flex-wrap: wrap;
+        margin: 100px 10px;
         justify-content: space-around;
         gap: 20px;
       }
-      
+
       .project {
         position: relative;
         width: 270px;
         height: 400px;
+        transition: 0.3s;
       }
-      
+
+      .project:hover {
+        transform: scale(1.05);
+      }
+
       .label {
         width: 100%;
         height: 12%;
@@ -34,7 +44,7 @@
         text-align: center;
         font-size: 2em;
       }
-      
+
       .pot {
         position: absolute;
         padding: 10%;
@@ -47,8 +57,8 @@
         background-color: brown;
         text-align: center;
       }
-      
-      
+
+
       .pot img {
         width: 54%;
         position: absolute;
@@ -57,40 +67,78 @@
         bottom: 5%;
         left: 22%;
       }
-    
+
       .plant1 {
         position: absolute;
         width: 100%;
         height: 40%;
       }
-      
+
       .plant1 div {
-          width: 50%;
-          height: 100%;
-          background-color: green;
-          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-          position: absolute;
+        width: 50%;
+        height: 100%;
+        background-color: green;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        position: absolute;
+      }
+
+      .plant1 div:nth-child(1) {
+        top: 20%;
+        left: 0%;
+        transform: rotate(-40deg);
+      }
+
+      .plant1 div:nth-child(2) {
+        top: 0;
+        left: 25%;
+      }
+
+      .plant1 div:nth-child(3) {
+        top: 20%;
+        left: 50%;
+        transform: rotate(40deg);
+      }
+
+      .navbar-wrapper {
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        z-index: 10;
       }
       
-      .plant1 div:nth-child(1) {
-            top: 20%;
-            left: 0%;
-            transform: rotate(-40deg);
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #303030;
+        color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
-      .plant1 div:nth-child(2) {
-            top: 0;
-            left: 25%;
-      }      
-       .plant1 div:nth-child(3) {
-            top: 20%;
-            left: 50%;
-            transform: rotate(40deg);
-      }     
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+      }
     </style>
+
+
   </head>
   <body>
+    
+    <div class="navbar-wrapper">
+    <nav class="navbar">
+      <div class="logo">Red Atagi</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    </div>
+
     <div class="projects-container">
-<!--       escapeCASE -->
+      <!--       escapeCASE -->
       <div class="project">
         <div class="plant1">
           <div></div>
@@ -103,10 +151,10 @@
             <p>Shape-Changing Movement added to a phone case, encouraging screen time awareness</p>
             <img src="esacpe-case.PNG" alt="escapeCASE image">
           </div>
-        </div> 
+        </div>
       </div>
- 
-<!--       Cntrl + C Synth -->
+
+      <!--       Cntrl + C Synth -->
       <div class="project">
         <div class="plant1">
           <div></div>
@@ -121,9 +169,9 @@
           </div>
         </div>
 
-<!--       CSS Still Life -->
+        <!--       CSS Still Life -->
       </div>
-        <div class="project">
+      <div class="project">
         <div class="plant1">
           <div></div>
           <div></div>
@@ -135,7 +183,7 @@
             <p>A still life created using CSS art techniques </p>
             <img src="css-still-life.PNG" alt="CSS Still Life image">
           </div>
-        </div> 
+        </div>
       </div>
 
       <!--       A Letter to the Internet -->
@@ -151,12 +199,12 @@
             <p>A still life created using CSS art techniques </p>
             <img src="letter-to-internet.PNG" alt="A Letter to the Internet image">
           </div>
-        </div> 
+        </div>
       </div>
-      
-      
+
+
     </div>
-      
+
 
   </body>
 </html>
