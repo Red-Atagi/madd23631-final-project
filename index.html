@@ -9,16 +9,17 @@
     <title>Red Atagi</title>
     <meta name="author" content="Red Atagi">
     <meta name="description" content="A list of Red Atagi's projects">
-
     <style>
       body {
         margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: hsl(86, 63%, 39%);
       }
 
       .projects-container {
         display: flex;
         flex-wrap: wrap;
-        margin: 100px 10px;
+        margin: 20vh 10px;
         justify-content: space-around;
         gap: 20px;
       }
@@ -36,13 +37,16 @@
 
       .label {
         width: 100%;
-        height: 12%;
+        height: 14%;
         bottom: 40%;
         position: absolute;
-        background-color: brown;
+        background-color: #814C2D;
         z-index: 2;
         text-align: center;
-        font-size: 2em;
+        font-size: 1.5em;
+        border-radius: 3%;
+        color: hsl(0, 0%, 95%);
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       }
 
       .pot {
@@ -55,9 +59,11 @@
         z-index: 1;
         clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
         background-color: brown;
+        background: linear-gradient(180deg, hsl(22, 44%, 21%) 15%, #814C2D 18%);
         text-align: center;
+        color: white;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       }
-
 
       .pot img {
         width: 54%;
@@ -66,6 +72,18 @@
         border: 2px solid black;
         bottom: 5%;
         left: 22%;
+      }
+
+      .pot-shadow {
+        position: absolute;
+        width: 75%;
+        /* Make the shadow larger */
+        height: 16%;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        /* Make it a circle */
+        bottom: -6%;
+        left: 14%
       }
 
       .plant1 {
@@ -105,36 +123,111 @@
         top: 0;
         z-index: 10;
       }
-      
+
       .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        background-color: #303030;
-        color: white;
+        background-color: hsl(0, 0%, 79%);
+        color: black;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        font-weight: bold;
+        font-size: 1.3em
       }
 
       .nav-links {
         display: flex;
         gap: 20px;
       }
+
+      .sky {
+        width: 100vw;
+        height: 40vh;
+        top: 0;
+        background-color: hsl(201, 90%, 67%);
+        position: absolute;
+        z-index: -1;
+      }
+
+      .cloud {
+        height: 70px;
+        width: 200px;
+        border-radius: 100px;
+        border-bottom: 5px solid gray;
+
+        position: relative;
+        margin: auto;
+        top: 15vh;
+        background-color: white;
+        animation: animateCloud 100s linear infinite;
+        z-index: 1;
+
+      }
+
+      .cloud::before,
+      .cloud::after {
+        background: #fff;
+        content: '';
+        position: absolute;
+      }
+
+      .cloud::before {
+        border-radius: 50%;
+        top: -21px;
+        left: 28px;
+        height: 80px;
+        width: 80px;
+      }
+
+      .cloud::after {
+        border-radius: 50%;
+        top: -50px;
+        left: 69px;
+        height: 100px;
+        width: 100px;
+      }
+      
+        @keyframes animateCloud {
+    0% {
+      margin-left: -25%;
+    }
+
+    100% {
+      margin-left: 100%;
+    }
+  }
+
+      .sun {
+        height: 25vh;
+        width: 25vh;
+        top: 12px;
+        right: 0;
+        border-radius: 50%;
+        background-color: hsl(54, 100%, 50%);
+        position: absolute;
+        z-index: 0;
+      }
     </style>
-
-
   </head>
   <body>
-    
+    <div class="sky">
+      <div class="cloud"></div>
+      <div class="sun"></div>
+    </div>
+
     <div class="navbar-wrapper">
-    <nav class="navbar">
-      <div class="logo">Red Atagi</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#works">Works</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+      <nav class="navbar">
+        <div class="logo">Red Atagi</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#works">Works</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
     </div>
 
     <div class="projects-container">
@@ -151,6 +244,7 @@
             <p>Shape-Changing Movement added to a phone case, encouraging screen time awareness</p>
             <img src="esacpe-case.PNG" alt="escapeCASE image">
           </div>
+          <div class="pot-shadow"></div>
         </div>
       </div>
 
@@ -167,22 +261,7 @@
             <p>An sythesizer that utilizes copy + paste short cuts. Created using HTML, CSS and Javascript </p>
             <img src="ctrl-c-synth.PNG" alt="Cntrl + C Synth image">
           </div>
-        </div>
-
-        <!--       CSS Still Life -->
-      </div>
-      <div class="project">
-        <div class="plant1">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <h3 class="label">CSS Still Life</h3>
-        <div class="container">
-          <div class="pot">
-            <p>A still life created using CSS art techniques </p>
-            <img src="css-still-life.PNG" alt="CSS Still Life image">
-          </div>
+          <div class="pot-shadow"></div>
         </div>
       </div>
 
@@ -200,11 +279,25 @@
             <img src="letter-to-internet.PNG" alt="A Letter to the Internet image">
           </div>
         </div>
+        <div class="pot-shadow"></div>
       </div>
 
-
+      <!--       CSS Still Life -->
+      <div class="project">
+        <div class="plant1">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h3 class="label">CSS Still Life</h3>
+        <div class="container">
+          <div class="pot">
+            <p>A still life created using CSS art techniques </p>
+            <img src="css-still-life.PNG" alt="CSS Still Life image">
+          </div>
+        </div>
+        <div class="pot-shadow"></div>
+      </div>
     </div>
-
-
   </body>
 </html>
