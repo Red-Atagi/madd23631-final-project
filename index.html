@@ -62,7 +62,7 @@
         background: linear-gradient(180deg, hsl(22, 44%, 21%) 15%, #814C2D 18%);
         text-align: center;
         color: white;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
       }
 
       .pot img {
@@ -129,19 +129,30 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px;
-        background-color: hsl(0, 0%, 79%);
-        color: black;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #252525;
+        color: #ed5858;
+/*         box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1); */
       }
 
       .logo {
         font-weight: bold;
-        font-size: 1.3em
+        font-size: 1.2em
       }
 
       .nav-links {
         display: flex;
         gap: 20px;
+      }
+
+      .nav-links a {
+        color: #e6e6e6;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-size: 1.1em
+      }
+
+      .nav-links a:hover {
+        color: white;
       }
 
       .sky {
@@ -190,16 +201,16 @@
         height: 100px;
         width: 100px;
       }
-      
-        @keyframes animateCloud {
-    0% {
-      margin-left: -25%;
-    }
 
-    100% {
-      margin-left: 100%;
-    }
-  }
+      @keyframes animateCloud {
+        0% {
+          margin-left: -25%;
+        }
+
+        100% {
+          margin-left: 100%;
+        }
+      }
 
       .sun {
         height: 25vh;
@@ -233,78 +244,78 @@
     <div class="projects-container">
       <!--       escapeCASE -->
       <a href="https://youtu.be/Gi5amqqapPw">
-      <div class="project">
-        <div class="plant1">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <h3 class="label">escapeCASE</h3>
-        <div class="container">
-          <div class="pot">
-            <p>Shape-Changing Movement added to a phone case, encouraging screen time awareness</p>
-            <img src="esacpe-case.PNG" alt="escapeCASE image">
+        <div class="project">
+          <div class="plant1">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
-          <div class="pot-shadow"></div>
+          <h3 class="label">escapeCASE</h3>
+          <div class="container">
+            <div class="pot">
+              <p>Shape-Changing Movement added to a phone case, encouraging screen time awareness</p>
+              <img src="esacpe-case.PNG" alt="escapeCASE image">
+            </div>
+            <div class="pot-shadow"></div>
+          </div>
         </div>
-      </div>
       </a>
 
       <!--       A Letter to the Internet -->
       <a href="#">
-      <div class="project">
-        <div class="plant1">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <h3 class="label">A Letter to the Internet</h3>
-        <div class="container">
-          <div class="pot">
-            <p>A still life created using CSS art techniques </p>
-            <img src="letter-to-the-internet.png" alt="A Letter to the Internet image">
+        <div class="project">
+          <div class="plant1">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
+          <h3 class="label">A Letter to the Internet</h3>
+          <div class="container">
+            <div class="pot">
+              <p>A still life created using CSS art techniques </p>
+              <img src="letter-to-the-internet.png" alt="A Letter to the Internet image">
+            </div>
+          </div>
+          <div class="pot-shadow"></div>
         </div>
-        <div class="pot-shadow"></div>
-      </div>
       </a>
 
       <!--       CSS Still Life -->
       <a href="https://red-atagi.github.io/css-still-life/">
-      <div class="project">
-        <div class="plant1">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <h3 class="label">CSS Still Life</h3>
-        <div class="container">
-          <div class="pot">
-            <p>A still life created using CSS art techniques </p>
-            <img src="css-still-life.png" alt="CSS Still Life image">
+        <div class="project">
+          <div class="plant1">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
-        </div>
-        <div class="pot-shadow"></div>
-      </div>
-      </a>
-      
-      <!--       Cntrl + C Synth -->
-      <a href="https://red-atagi.github.io/oam_proj1/">
-      <div class="project">
-        <div class="plant1">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <h3 class="label">Cntrl + C Synth</h3>
-        <div class="container">
-          <div class="pot">
-            <p>An sythesizer that utilizes copy + paste short cuts. Created using HTML, CSS and Javascript </p>
-            <img src="cntrl-c-synth.png" alt="Cntrl + C Synth image">
+          <h3 class="label">CSS Still Life</h3>
+          <div class="container">
+            <div class="pot">
+              <p>A still life created using CSS art techniques </p>
+              <img src="css-still-life.png" alt="CSS Still Life image">
+            </div>
           </div>
           <div class="pot-shadow"></div>
         </div>
-      </div>
+      </a>
+
+      <!--       Cntrl + C Synth -->
+      <a href="https://red-atagi.github.io/oam_proj1/">
+        <div class="project">
+          <div class="plant1">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <h3 class="label">Cntrl + C Synth</h3>
+          <div class="container">
+            <div class="pot">
+              <p>An sythesizer that utilizes copy + paste short cuts. Created using HTML, CSS and Javascript </p>
+              <img src="cntrl-c-synth.png" alt="Cntrl + C Synth image">
+            </div>
+            <div class="pot-shadow"></div>
+          </div>
+        </div>
       </a>
     </div>
   </body>
