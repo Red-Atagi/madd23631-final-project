@@ -11,89 +11,152 @@
     <meta name="description" content="A list of Red Atagi's projects">
     
     <style>
-      :root {
-       --lableWidth: 200px 
-      }
-      
-      .main-menu {
+      .projects-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 20px;
-        padding: 20px;
       }
       
       .project {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 25px;
-        max-width: 350px;
-        gap: 10px;
+        position: relative;
+        width: 270px;
+        height: 400px;
       }
-
+      
       .label {
-        background-color: hsl(13, 28%, 32%);
-        margin: 10px;
-        padding: 10px;
-        border-radius: 10%;
-      }
-      
-      .label img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
         width: 100%;
-        border-radius: 10%
+        height: 12%;
+        bottom: 40%;
+        position: absolute;
+        background-color: brown;
+        z-index: 2;
+        text-align: center;
+        font-size: 2em;
       }
       
+      .pot {
+        position: absolute;
+        padding: 10%;
+        height: 40%;
+        width: 70%;
+        bottom: 0%;
+        left: 5%;
+        z-index: 1;
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+        background-color: brown;
+        text-align: center;
+      }
+      
+      
+      .pot img {
+        width: 54%;
+        position: absolute;
+        border-radius: 5%;
+        border: 2px solid black;
+        bottom: 5%;
+        left: 22%;
+      }
+    
+      .plant1 {
+        position: absolute;
+        width: 100%;
+        height: 40%;
+      }
+      
+      .plant1 div {
+          width: 50%;
+          height: 100%;
+          background-color: green;
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          position: absolute;
+      }
+      
+      .plant1 div:nth-child(1) {
+            top: 20%;
+            left: 0%;
+            transform: rotate(-40deg);
+      }
+      .plant1 div:nth-child(2) {
+            top: 0;
+            left: 25%;
+      }      
+       .plant1 div:nth-child(3) {
+            top: 20%;
+            left: 50%;
+            transform: rotate(40deg);
+      }     
     </style>
+  </head>
   <body>
-
-    <!-- Your content goes here inside your <body> -->
-    <main class="main-menu">
+    <div class="projects-container">
 <!--       escapeCASE -->
       <div class="project">
-        <img src="ceiling-cat.jpg" alt="description of image">
-        <div class="label">
-          <img src="esacpe-case.PNG" alt="escapeCASE image">
-          <h3>escapeCASE</h3>
-          <p>Shape-Changing Movement added to a phone case, encouraging screen time awareness</p>
+        <div class="plant1">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
+        <h3 class="label">escapeCASE</h3>
+        <div class="container">
+          <div class="pot">
+            <p>Shape-Changing Movement added to a phone case, encouraging screen time awareness</p>
+            <img src="esacpe-case.PNG" alt="escapeCASE image">
+          </div>
+        </div> 
+      </div>
+ 
+<!--       Cntrl + C Synth -->
+      <div class="project">
+        <div class="plant1">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h3 class="label">Cntrl + C Synth</h3>
+        <div class="container">
+          <div class="pot">
+            <p>An sythesizer that utilizes copy + paste short cuts. Created using HTML, CSS and Javascript </p>
+            <img src="ctrl-c-synth.PNG" alt="Cntrl + C Synth image">
+          </div>
+        </div>
+
+<!--       CSS Still Life -->
+      </div>
+        <div class="project">
+        <div class="plant1">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h3 class="label">CSS Still Life</h3>
+        <div class="container">
+          <div class="pot">
+            <p>A still life created using CSS art techniques </p>
+            <img src="css-still-life.PNG" alt="CSS Still Life image">
+          </div>
+        </div> 
       </div>
 
-    
-      
-<!--       copy + paste instrument -->
+      <!--       A Letter to the Internet -->
       <div class="project">
-        <div class="label">
-          <img alt="ClipSynth image">
-          <h3>Clip Synth</h3>
-          <p>An instrument Created using HTML, CSS and Javascript that utilizes copy + paste short cuts</p>
+        <div class="plant1">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-      </div>
-
-<!--       CSS Still Life  -->
-      <div class="project">
-        <div class="label">
-          <img alt="CSS Still Life">
-          <h3>CSS Still Life</h3>
-          <p>A still life created using CSS art techniques</p>
-        </div>
+        <h3 class="label">A Letter to the Internet</h3>
+        <div class="container">
+          <div class="pot">
+            <p>A still life created using CSS art techniques </p>
+            <img src="letter-to-internet.PNG" alt="A Letter to the Internet image">
+          </div>
+        </div> 
       </div>
       
       
-<!--       A letter to the Internet -->
-      <div class="project">
-        <div class="label">
-          <img alt="A Letter to the Internet">
-          <h3>A Letter to the Internet</h3>
-          <p>A project of multiple artist linking letters to the Internet</p>
-        </div>
-      </div>
+    </div>
       
-      
-    </main>
 
   </body>
 </html>
